@@ -16,9 +16,7 @@ const getWeather = async ({ city, country_code }) => {
         city
       )}&days=7&aqi=no&alerts=no`,
       requestOptions
-    ).catch((err) => {
-      console.log("weather api request error", err);
-    });
+    );
 
     const data = await response.json();
     const current = data.current;
